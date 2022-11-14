@@ -2,6 +2,7 @@
 body, html {
     height: 100%;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
   }
   .link{
     flex: 1;
@@ -59,10 +60,10 @@ body, html {
    background-image: url(images/canyon.jpg);
   
     /* Full height */
-    height: 100%; 
+    height: 500px; 
 
     /* Center and scale the image nicely */
-    background-position: center;
+    position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -71,3 +72,108 @@ body, html {
     color:white;
     font-size: 30px;
   }
+  .par{
+    position: absolute;
+    justify-content: center;
+    align-items:center;
+    color:white;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  /* Create two unequal columns */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 100%;
+  padding-left: 50px;
+}
+
+/* Right column */
+.rightcolumn {
+  float: right;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding-left: 50px;
+}
+/*splits paragraphs into columns*/
+.content{
+  column-count: 2;
+}
+
+/* image container and background */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+  height: 200px;
+}
+
+.panorama {
+  padding: 20px;
+  width: 100%;
+  height: 500px;
+}
+.stops{
+  padding: 10px;
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  font-size: 20px;
+}
+/* image */
+.fakeimg img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.panorama img{
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+}
+
+.stops img{
+  width: 100%;
+  height: 450px;
+  object-fit: contain;
+
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+.card h2{
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
